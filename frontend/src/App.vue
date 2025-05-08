@@ -2,7 +2,7 @@
   <div class="hiphop-app" :class="{ 'night-mode': nightMode }">
     <!-- Header with mode toggle -->
     <header>
-      <h1>THE PERSONA PARADOX</h1>
+      <h1>THE "KEEPING IT REAL" PARADOX</h1>
       <p>Exploring Authenticity in Hip-Hop Through Interactive Graffiti</p>
       <button @click="toggleMode" class="mode-toggle">
         {{ nightMode ? 'DAY MODE' : 'NIGHT MODE' }}
@@ -175,7 +175,7 @@ export default {
     getRandomTagText(type) {
       const texts = {
         'ego': ['I AM', 'ME', 'SELF', 'SOUL', 'MYSELF'],
-        'alter-ego': ['SLIM SHADY', 'PUNCHLINE', 'STAKES', 'GHOST', 'ALTER'],
+        'alter-ego': ['SLIM SHADY', 'GUNNA', 'MF DOOM', 'GHOSTFACE', 'IGOR'],
         'persona': ['IMAGE', 'MASK', 'ROLE', 'CHARACTER', 'FRONT'],
         'truth': ['REAL', 'FACT', 'RAW', 'HONEST', 'TRUE'],
         'street': ['GRIND', 'STRUGGLE', 'HOOD', 'BLOCK', 'PAIN']
@@ -195,7 +195,7 @@ export default {
         return {
           name: concept.name,
           x: (wallWidth * 0.8) * (index / this.philosophy.length) + (wallWidth * 0.1),
-          y: wallHeight * 0.7, // Changed from wallHeight - 50 to 70% of wall height
+          y: wallHeight * 0.7, 
           type: `philosophy-${index % 4}`
         };
       });
@@ -354,6 +354,7 @@ header p {
   justify-content: center;
   text-align: center;
   font-weight: bold;
+  font-size: 10px;
   cursor: pointer;
   animation: float 3s infinite ease-in-out;
   border: 3px solid white;
