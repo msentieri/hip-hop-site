@@ -195,7 +195,7 @@ export default {
         return {
           name: concept.name,
           x: (wallWidth * 0.8) * (index / this.philosophy.length) + (wallWidth * 0.1),
-          y: wallHeight - 50,
+          y: wallHeight * 0.7, // Changed from wallHeight - 50 to 70% of wall height
           type: `philosophy-${index % 4}`
         };
       });
@@ -359,6 +359,7 @@ header p {
   border: 3px solid white;
   background: rgba(255,255,255,0.1);
   transition: all 0.3s;
+  min-height: 100px;
 }
 
 .philosophy-bubble:hover {
@@ -366,10 +367,10 @@ header p {
   background: rgba(255,255,255,0.2);
 }
 
-.philosophy-0 { animation-delay: 0s; top: 100px; }
-.philosophy-1 { animation-delay: 0.5s; top: 150px; }
-.philosophy-2 { animation-delay: 1s; top: 200px; }
-.philosophy-3 { animation-delay: 1.5s; top: 250px; }
+.philosophy-0 { animation-delay: 0s; top: 20%; }
+.philosophy-1 { animation-delay: 0.5s; top: 30%; }
+.philosophy-2 { animation-delay: 1s; top: 40%; }
+.philosophy-3 { animation-delay: 1.5s; top: 50%; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
